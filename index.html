@@ -1,171 +1,199 @@
-<html><head><script>
-            let photos = [
-                "imgs/1.png",
-                "imgs/2.png", 
-                "imgs/3.png",
-                "imgs/4.jpg",
-                "imgs/5.png",
-                "imgs/6.png",
-                "imgs/7.png",
-                "imgs/8.jpg",
-                "imgs/9.jpg",
-                "imgs/10.png",
-                "imgs/11.png",
-                "imgs/12.png",
-                "imgs/13.JPG",
-                "imgs/14.jpg",
-                "imgs/15.jpg",
-                "imgs/16.jpg",
-                "imgs/18.jpg",
-                "imgs/19.jpg",
-                "imgs/20.jpg",
-                "imgs/21.jpg",
-                "imgs/22.png",
-                "imgs/23.png",
-                "imgs/24.png",
-                "imgs/25.png",
-                "imgs/26.jpg",
-                "imgs/27.png",
-                "imgs/28.png",
-                "imgs/29.png",
-                "imgs/30.png",
-                "imgs/31.png",
-                "imgs/33.png",
-                "imgs/34.jpg",
-                "imgs/35.png",
-                "imgs/36.png",
-                "imgs/37.jpg",
-                "imgs/38.jpg",
-                "imgs/39.png",
-                "imgs/40.png",
-                "imgs/41.png",
-                "imgs/42.png",
-                "imgs/43.png",
-                "imgs/44.png",
-                "imgs/45.png"
-                
-            ]
-        </script>
-    
-    <meta charset="UTF-8">
-    
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/main_1.css">
-        <link rel="icon" href="images/fav.ico">
-
-        <style>
-            
-            .logo-container {
-                text-align: center;
-                margin-bottom: 10px;
-            }
-
-            
-            .server-logo {
-                display: block;
-                margin: 0 auto 15px auto;
-                max-width: 270px; 
-                width: 15vw; 
-                min-width: 120px; 
-                height: auto;
-                opacity: 0.9;
-                transition: opacity 0.3s ease, transform 0.3s ease;
-                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
-            }
-
-
-            .server-logo:hover {
-                opacity: 1;
-                transform: scale(1.05);
-            }
-
-            
-            .server-title {
-                font-size: 3em;
-                font-weight: bold;
-                margin: 0;
-                text-align: center;
-                letter-spacing: 2px;
-            }
-        </style>
-
-        <title>Gomigrad.com | Load Screen</title>
-    </head>
-
-    <body>
-        <div class="background1" id="1" style="
-        position: absolute;
-        
-        background-position: center center;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: 100vh;
-        background-size: cover;
-        z-index: -1;
-        "></div>
-
-        <div class="background2" id="2" style="
-        position: absolute;
-
-        background-position: center center;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: 100vh;
-        background-size: cover;
-        z-index: -1;
-        "></div>
-
-        <div id="load" style="
-        width: 512px;
-        height: 512px;
-        position: absolute;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: -1;
-        opacity: 0;
-        "></div>
-
-        <div style="
-            height: 50%;
-            display: flex;
-            flex-direction: column;
-        ">
-            <div style="width: 100%; flex: 1;"></div>
-            <div style="
-                width: 100%;
-                height: auto;
-            ">
-                <div class="logo-container">
-                    <img src="gomigradlogo/pluv.png" alt="GOMIGRAD Logo" class="server-logo">
-                    <h1 id="servername" class="server-title">GOMIGRAD.COM</h1>
-                </div>
-
-                <p id="mapname" style="
-                text-align: center;
-                font-size: 3em;
-                ">cs_office</p>
-            </div>
-        </div>
-
-        <div id="bottom" style="
-        height: 50%;
-        ">
-            <p id="textstatus" style="
-            position: relative;
-            text-align: center;
-            top: 0.575em;
-            font-size: 20;
-            ">Подключение...</p>
-    
-            <div id="history" style="
-                width: 100%;
-                height: 0px;
-                position: relative;
-                top: 1.5em;
-            "></div>
-        </div>
-    
+<html>
+<head>
 <script>
+    let photos = [
+        "imgs/1.png",
+        "imgs/2.png", 
+        "imgs/3.png",
+        "imgs/4.jpg",
+        "imgs/5.png",
+        "imgs/6.png",
+        "imgs/7.png",
+        "imgs/8.jpg",
+        "imgs/9.jpg",
+        "imgs/10.png",
+        "imgs/11.png",
+        "imgs/12.png",
+        "imgs/13.JPG",
+        "imgs/14.jpg",
+        "imgs/15.jpg",
+        "imgs/16.jpg",
+        "imgs/18.jpg",
+        "imgs/19.jpg",
+        "imgs/20.jpg",
+        "imgs/21.jpg",
+        "imgs/22.png",
+        "imgs/23.png",
+        "imgs/24.png",
+        "imgs/25.png",
+        "imgs/26.jpg",
+        "imgs/27.png",
+        "imgs/28.png",
+        "imgs/29.png",
+        "imgs/30.png",
+        "imgs/31.png",
+        "imgs/33.png",
+        "imgs/34.jpg",
+        "imgs/35.png",
+        "imgs/36.png",
+        "imgs/37.jpg",
+        "imgs/38.jpg",
+        "imgs/39.png",
+        "imgs/40.png",
+        "imgs/41.png",
+        "imgs/42.png",
+        "imgs/43.png",
+        "imgs/44.png",
+        "imgs/45.png"
+    ]
+</script>
+
+<meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_1.css">
+    <link rel="icon" href="images/fav.ico">
+
+    <style>
+        
+        .logo-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        
+        .server-logo {
+            display: block;
+            margin: 0 auto 15px auto;
+            max-width: 270px; 
+            width: 15vw; 
+            min-width: 120px; 
+            height: auto;
+            opacity: 0.9;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        }
+
+
+        .server-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        
+        .server-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    </style>
+
+    <title>Gomigrad.com | Load Screen</title>
+</head>
+
+<body>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/hellowen.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+
+    <div class="background1" id="1" style="
+    position: absolute;
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+    "></div>
+
+    <div class="background2" id="2" style="
+    position: absolute;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+    "></div>
+
+    <div id="load" style="
+    width: 512px;
+    height: 512px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0;
+    "></div>
+
+    <div style="
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    ">
+        <div style="width: 100%; flex: 1;"></div>
+        <div style="
+            width: 100%;
+            height: auto;
+        ">
+            <div class="logo-container">
+                <img src="gomigradlogo/hellowen.png" alt="GOMIGRAD Logo" class="server-logo">
+                <h1 id="servername" class="server-title">GOMIGRAD.COM</h1>
+            </div>
+
+            <p id="mapname" style="
+            text-align: center;
+            font-size: 3em;
+            ">cs_office</p>
+        </div>
+    </div>
+
+    <div id="bottom" style="
+    height: 50%;
+    ">
+        <p id="textstatus" style="
+        position: relative;
+        text-align: center;
+        top: 0.575em;
+        font-size: 20;
+        ">Подключение...</p>
+
+        <div id="history" style="
+            width: 100%;
+            height: 0px;
+            position: relative;
+            top: 1.5em;
+        "></div>
+    </div>
+
+<script>
+
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    
+
+    backgroundMusic.volume = 0.5;
+    
+
+    window.addEventListener('load', function() {
+        backgroundMusic.play().catch(error => {
+            console.log("Автовоспроизведение заблокировано. Музыка включится после клика.");
+        });
+    });
+    
+
+    document.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+        }
+    }, { once: true });
+
+
     let usesPhotos = []
 
     let background1 = document.getElementById("1")
@@ -298,6 +326,6 @@
             }
         }
     }
-
-    //setInterval(function() {addHistory("tes55555555555555555555t" + Math.random())},500)
-</script></body></html>
+</script>
+</body>
+</html>
