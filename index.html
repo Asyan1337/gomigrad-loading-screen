@@ -177,23 +177,31 @@
     const backgroundMusic = document.getElementById('backgroundMusic');
     
 
-    backgroundMusic.volume = 0.05;
+    backgroundMusic.addEventListener('loadedmetadata', function() {
+        backgroundMusic.volume = 0.02;
+    });
     
 
+    backgroundMusic.addEventListener('play', function() {
+        backgroundMusic.volume = 0.02; 
+    });
+
     window.addEventListener('load', function() {
+
+        backgroundMusic.volume = 0.02; 
         backgroundMusic.play().catch(error => {
             console.log("Автовоспроизведение заблокировано. Музыка включится после клика.");
         });
     });
     
-
     document.addEventListener('click', function() {
         if (backgroundMusic.paused) {
+            backgroundMusic.volume = 0.02; 
             backgroundMusic.play();
         }
     }, { once: true });
 
-
+    
     let usesPhotos = []
 
     let background1 = document.getElementById("1")
